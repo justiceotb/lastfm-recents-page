@@ -9,7 +9,7 @@
 
 var Lastfm = {
 	init: function(config) {
-		// this.url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user='+config.username+'&api_key='+config.apikey+'&limit='+config.count+'&format=json';
+		this.url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user='+config.username+'&api_key='+config.apikey+'&limit='+config.count+'&format=json';
 		this.template = config.template;
 		this.container = config.container;
 		this.fetch();
