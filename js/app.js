@@ -23,9 +23,8 @@ var Lastfm = {
 		var self = this;
 
 		$.getJSON(this.url, function(data) {
-			console.log('Got the json');
 			var feed = data.recenttracks.track;
-			console.log(feed);
+
 			self.tracks = $.map(feed, function(track) {
 				var d = new Date(track.date['uts'] * 1000)
 				const shortTime = new Intl.DateTimeFormat("en", {
