@@ -87,6 +87,8 @@ body {
 }
 
 .header {
+  position: fixed;
+  width: 100%;
   display: block;
   background-color: rgb(53, 81, 159);
   box-sizing: border-box;
@@ -124,6 +126,7 @@ body {
 .footer .imgleft {
   float: left;
   padding: 2px;
+  padding-right: 14px;
   width: 64px;
   height: 64px;
 }
@@ -204,7 +207,7 @@ h1 {
 .lastfm .when p {
   color: #6f6f6f;
   float: left;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .lastfm .cover {
@@ -227,7 +230,7 @@ h1 {
 }
 
 .lastfm .info p {
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 26px;
   margin-bottom: 4px;
   padding-left: 24px;
