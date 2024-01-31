@@ -88,27 +88,13 @@ body {
 
 .header {
   position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
-  display: block;
   background-color: rgb(53, 81, 159);
-  box-sizing: border-box;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  padding-block-end: 10px;
-  padding-block-start: 10px;
-  padding-inline-end: 10px;
-  padding-inline-start: 10px;
-  margin-block-end: 0px;
-  margin-block-start: 0px;
-  margin-bottom: 0px;
-  margin-inline-end: 0px;
-  margin-inline-start: 0px;
-  margin-top: 0px;
-  max-width: 100%;
-  min-height: 80px;
-  min-width: 0px;
+  color: rgb(231, 229, 215);
+  margin-bottom: 20px;
+  padding: 2px;
   line-height: 26px;
 }
 
@@ -168,7 +154,7 @@ h1 {
 
 .loading {
   display: block;
-  margin: 0 auto;
+  margin: 70 auto;
 }
 
 /**
@@ -177,18 +163,20 @@ h1 {
 */
 .container {
   max-width: 500px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-top: 68px;
+  margin-bottom: 68px;
   padding: 20px 15px;
 }
 
 .lastfm {
   float: none;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   width: 500px;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 50px;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .lastfm .highlight {
@@ -227,8 +215,8 @@ h1 {
   color: #6f6f6f;
   float: left;
   margin-left: 25px;
-  margin-top: 2px;
-  width: 380px;
+  margin-top: 4px;
+  width: 350px;
 }
 
 .lastfm .info p {
