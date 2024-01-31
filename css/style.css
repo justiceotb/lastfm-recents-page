@@ -176,7 +176,7 @@ h1 {
 * Custom Styles for Last.FM Recent Tracks
 */
 .container {
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 20px 15px;
 }
@@ -185,9 +185,10 @@ h1 {
   float: none;
   position: relative;
   margin-bottom: 25px;
-  width: 600px;
+  width: 500px;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 50px;
+  border-radius: 3px;
 }
 
 .lastfm .highlight {
@@ -226,7 +227,8 @@ h1 {
   color: #6f6f6f;
   float: left;
   margin-left: 25px;
-  width: 400px;
+  margin-top: 2px;
+  width: 380px;
 }
 
 .lastfm .info p {
