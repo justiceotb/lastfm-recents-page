@@ -1,7 +1,7 @@
 /**
 * @file style.css
-* @author Pedro Rogerio, <http://www.pinceladasdaweb.com.br>
-* @copyright (c) 2013, Pedro Rogerio
+* @author Craig Beaton
+* @copyright (c) 2024, Craig Beaton
 * @version 1.0.0
 * @License Licensed under the MIT License.
 */
@@ -12,162 +12,253 @@
 */
 html {
   overflow-y: scroll;
-  min-height: 100
+  min-height: 100;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, fieldset, blockquote, pre, textarea {
-  margin: 0
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+fieldset,
+blockquote,
+pre,
+textarea {
+  margin: 0;
 }
 
-ul, ol, td, th, fieldset, legend {
-  padding: 0
+ul,
+ol,
+td,
+th,
+fieldset,
+legend {
+  padding: 0;
 }
 
 a {
-  text-decoration: none
+  text-decoration: none;
 }
 
 a img {
-	border: 0
+  border: 0;
 }
 
-.cf:before, .cf:after {
-	content:" ";
-	display:table
+.cf:before,
+.cf:after {
+  content: " ";
+  display: grid;
 }
 
 .cf:after {
-	clear:both
+  clear: both;
 }
 
 /**
 * @section HTML5 Elements
 * Set display:block for HTML5 block elements
 */
-main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block
+main,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
-/**
-* @section Fonts
-* Custom Fonts here
-*/
-@font-face {
-    font-family: 'DroidSansRegular';
-    src: url('fonts/DroidSans-webfont.eot');
-    src: url('fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/DroidSans-webfont.woff') format('woff'),
-         url('fonts/DroidSans-webfont.ttf') format('truetype'),
-         url('fonts/DroidSans-webfont.svg#DroidSansRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SortsMillGoudyItalic';
-    src: url('fonts/GoudyStM-Italic-webfont.eot');
-    src: url('fonts/GoudyStM-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/GoudyStM-Italic-webfont.woff') format('woff'),
-         url('fonts/GoudyStM-Italic-webfont.ttf') format('truetype'),
-         url('fonts/GoudyStM-Italic-webfont.svg#SortsMillGoudyItalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/**
-* @section Main
-* Custom Styles
-*/
 body {
-	background: #EDEDED url(../img/noise.png) repeat;
-  font-size: 62.5%
+  background: #ededed url(../img/noise.png) repeat;
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: block;
+  background-color: rgb(53, 81, 159);
+  box-sizing: border-box;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  padding-block-end: 10px;
+  padding-block-start: 10px;
+  padding-inline-end: 10px;
+  padding-inline-start: 10px;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  margin-bottom: 0px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  margin-top: 0px;
+  max-width: 100%;
+  min-height: 80px;
+  min-width: 0px;
+  line-height: 26px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(204, 91, 68);
+  color: rgb(231, 229, 215);
+  margin-top: 20px;
+  padding: 2px;
+}
+
+.footer .imgleft {
+  float: left;
+  padding: 2px;
+  width: 64px;
+  height: 64px;
+}
+
+.footer .imgleft img {
+  border-radius: 8px;
+}
+
+.footer .imgright {
+  float: right;
+  padding: 2px;
+  width: 64px;
+  height: 64px;
+}
+
+.footer .imgright img {
+  max-width: 100%;
+  object-fit: scale-down;
+}
+
+.footer .notes {
+  font-family: "BenchNine", sans-serif;
+  font-size: 200%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  text-align: center;
 }
 
 h1 {
-	color: #6F6F6F;
-	font: 3em 'SortsMillGoudyItalic';
-	margin:10px 0 30px;
-	text-align: center
+  color: rgb(231, 229, 215);
+  font-family: "BenchNine", sans-serif;
+  font-size: 300%;
+  margin: 16px 0 16px;
+  text-align: center;
 }
 
 .loading {
-	display: block;
-	margin: 0 auto
+  display: block;
+  margin: 0 auto;
 }
 
 /**
 * @section Lastfm
-* Custom Styles for Last.fm Recent Tracks
+* Custom Styles for Last.FM Recent Tracks
 */
 .container {
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 20px 15px
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 15px;
 }
 
 .lastfm {
-	float: left;
-	position: relative;
-	margin-bottom: 25px;
-	width: 320px
+  float: none;
+  position: relative;
+  margin-bottom: 25px;
+  width: 600px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 50px;
 }
 
 .lastfm .highlight {
-	height: 125px;
-  left: -13px;
+  height: 125px;
+  left: -3px;
   position: absolute;
-  top: -1px;
+  top: 35px;
   width: 153px;
 }
 
+.lastfm .when {
+  float: left;
+  height: 26px;
+  width: 500px;
+}
+
+.lastfm .when p {
+  color: #6f6f6f;
+  float: left;
+  font-size: 2em;
+}
+
 .lastfm .cover {
-	float: left;
-	height: 120px;
-	width: 120px
+  float: left;
+  height: 120px;
+  width: 120px;
 }
 
 .lastfm .cover > img {
-    height: 120px;
-    max-width: none;
-    width: 120px
+  height: 120px;
+  max-width: none;
+  width: 120px;
 }
 
 .lastfm .info {
-	color: #6F6F6F;
-	float: left;
-	font-family: 'DroidSansRegular';
-	margin-left: 25px;
-	width: 165px;
+  color: #6f6f6f;
+  float: left;
+  margin-left: 25px;
+  width: 400px;
 }
 
 .lastfm .info p {
-	font-size: 1.1em;
-	line-height: 16px;
-	margin-bottom: 4px;
-	padding-left: 20px
+  font-size: 2em;
+  line-height: 26px;
+  margin-bottom: 4px;
+  padding-left: 24px;
+}
+
+.lastfm .info .song {
+  font-weight: bold;
 }
 
 .lastfm .song {
-	background: url(../img/icon-song.png) no-repeat left 4px;
+  background: url(../img/icon-song.png) no-repeat left 4px;
+  padding-bottom: 26px;
 }
 
 .lastfm .artist {
-	background: url(../img/icon-artist.png) no-repeat left 4px;
+  background: url(../img/icon-artist.png) no-repeat left 4px;
 }
 
 .lastfm .album {
-	background: url(../img/icon-album.png) no-repeat left 4px;
+  background: url(../img/icon-album.png) no-repeat left 4px;
 }
 
 @media only screen and (max-device-width: 480px) {
-	.container {
-		padding: 0 2px
-	}
+  .container {
+    padding: 0 2px;
+  }
 }
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation: portrait) {
-	.container {
-		max-width: 650px;
-		padding: 0
-	}	
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .container {
+    max-width: 650px;
+    padding: 0;
+  }
 }

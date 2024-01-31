@@ -9,7 +9,12 @@
 
 var Lastfm = {
 	init: function(config) {
-		this.url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user='+config.username+'&api_key='+config.apikey+'&limit='+config.count+'&format=json';
+		var currentDateObj = new Date();
+		var currentDateMs = currentDateObj.getTime();
+		var dayInMs = 24 * 60 * 60 * 1000; // 1 day
+		var fromTime = parseInt(Date.parse(new Date(currentDateMs - dayInMs).toISOString()) / 1000)
+
+		this.url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user='+config.username+'&from='+fromTime+'&api_key='+config.apikey+'&format=json&limit='+config.limit; 
 		this.template = config.template;
 		this.container = config.container;
 		this.fetch();
@@ -26,12 +31,19 @@ var Lastfm = {
 			var feed = data.recenttracks.track;
 
 			self.tracks = $.map(feed, function(track) {
+				var d = new Date(track.date['uts'] * 1000)
+				const shortTime = new Intl.DateTimeFormat("en", {
+					timeStyle: "short",
+				  });
+				var thetime = shortTime.format(d) //.toLocaleTimeString('en')
+
 				return {
 					image: track.image[2]['#text'],
 					song: track.name,
 					artist: track.artist['#text'],
 					album: track.album['#text'],
-					link: track.url
+					link: track.url,
+					time: thetime
 				}
 			});
 			self.attachTemplate();
@@ -43,8 +55,15 @@ Lastfm.init({
 	template: $('#tracks-template').html(),
 	container: $('.container'),
 	username: 'justiceotb',
-	count: 18,
-	// from:,
-	// to:,
+	limit: 200,
 	apikey: process.env.API_KEY
 })
+
+// $(document).ready(function() { /// Wait till page is loaded		
+// 	setInterval(timingLoad, 5000); //300
+// 	function timingLoad() {
+// 		$('#tracks-template').load('index.html #tracks-template', function() {
+// 		/// can add another function here
+// 		});
+// 	}
+// }); //// End of Wait till page is loaded
