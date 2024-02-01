@@ -95,7 +95,8 @@ body {
   color: rgb(231, 229, 215);
   margin-bottom: 20px;
   padding: 2px;
-  line-height: 26px;
+  height: 70px;
+  z-index: 9;
 }
 
 .footer {
@@ -103,16 +104,17 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
+  height: 70px;
   background-color: rgb(204, 91, 68);
   color: rgb(231, 229, 215);
   margin-top: 20px;
-  padding: 2px;
+  padding: 1px;
 }
 
 .footer .imgleft {
   float: left;
-  padding: 2px;
-  padding-right: 14px;
+  padding: 1px;
+  
   width: 64px;
   height: 64px;
 }
@@ -124,6 +126,7 @@ body {
 .footer .imgright {
   float: right;
   padding: 2px;
+  padding-right: 4px;
   width: 64px;
   height: 64px;
 }
@@ -154,7 +157,7 @@ h1 {
 
 .loading {
   display: block;
-  margin: 70 auto;
+  margin: 0 auto;
 }
 
 /**
@@ -162,7 +165,10 @@ h1 {
 * Custom Styles for Last.FM Recent Tracks
 */
 .container {
-  max-width: 500px;
+  /* max-width: 1400px; */
+  min-width: 400px;
+  /* position:fixed; */
+  top:30px;
   /* margin: 0 auto; */
   margin-top: 68px;
   margin-bottom: 68px;
@@ -170,10 +176,11 @@ h1 {
 }
 
 .lastfm {
-  float: none;
+  float: left;
   position: relative;
   margin-bottom: 20px;
-  width: 500px;
+  margin-left: 20px;
+  width: 400px;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 50px;
   border-radius: 5px;
@@ -188,9 +195,10 @@ h1 {
 }
 
 .lastfm .when {
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 0px;
   float: left;
   height: 26px;
-  width: 500px;
+  width: 100%;
 }
 
 .lastfm .when p {
@@ -216,7 +224,7 @@ h1 {
   float: left;
   margin-left: 25px;
   margin-top: 4px;
-  width: 350px;
+  width: 220px;
 }
 
 .lastfm .info p {
