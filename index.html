@@ -31,22 +31,11 @@
     </div>
 
     <div class="footer">
-      <div class="imgleft">
-        <a href="https://www.last.fm/user/justiceotb" target="_blank">
-          <img src="https://lastfm.freetls.fastly.net/i/u/64s/b4257945f44d49cfc91cac88afccdfe9.png" alt="'Justiceotb">
-        </a>
-        </div>
-        <div class="notes">
-          Powered by <a href=https://www.last.fm/ target="_blank">Last.FM</a>, 
-          <a href="https://finale.app/" target="_blank">Finale</a>,
-          <a href="https://azure.microsoft.com/en-au/" target="_blank">Microsoft Azure</a> and
-          Hopsters Pale.
-        </div>
-        <div class="imgright">
-          <a href="https://hopsters.coop/" target="_blank">
-            <img src="https://hopsters.coop/wp-content/uploads/2021/03/HOP_logo-emblem_white-100x100.png" alt="Hopsters">
-          </a>
-        </div>
+      <div class="notes">
+        Powered by <a href="https://www.last.fm/user/justiceotb" target="_blank">Last.FM</a>, 
+        <a href="https://finale.app/" target="_blank">Finale</a> and
+        <a href="https://hopsters.coop/shop/beers/pale-ale-case/" target="_blank">Hopsters Pale</a>.
+      </div>
     </div>
 
     <script id="tracks-template" type="text/x-handlebars-template">
@@ -78,16 +67,6 @@
     </script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
     <script src="js/app.js"></script>
-    <!-- <script>
-      // setTimeout(function(){ location.reload(); }, 300000);
-      setInterval(function(){
-        $.ajax({
-          url: 'index.html',
-          context: $('#container')
-        }).success(function(data) { 
-          $(this).html(data);
-        });
-      },15000);
-    </script> -->
+    <script>setTimeout(function(){ window.location.reload(); }, 300000);</script>
   </body>
 </html>
