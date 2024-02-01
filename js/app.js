@@ -1,6 +1,6 @@
 /*---------------
  * jQuery Last.FM Plugin by Craig Beaton
- * Forked from jQuery Last.Fm Plugin by Pinceladas da Web
+ * Forked from Lastfm Recent Tracks by Pinceladas da Web https://github.com/pinceladasdaweb/Lastfm-Recent-Tracks
  * Copyright (c) 2024
  * Version: 1.0.0 (30-01-2024)
  * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
@@ -30,7 +30,7 @@ var Lastfm = {
 				const shortTime = new Intl.DateTimeFormat("en", {
 					timeStyle: "short",
 				  });
-				var thetime = shortTime.format(d); //.toLocaleTimeString('en')
+				var thetime = shortTime.format(d); 
 
 				return {
 					image: track.image[2]['#text'],
