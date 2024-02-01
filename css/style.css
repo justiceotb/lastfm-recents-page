@@ -260,8 +260,8 @@ h1 {
 
   .lastfm {
     margin-left: 2px;
-    width: 378px;
-    /* padding: 4px; */
+    width: 370px;
+    float: none;
   }
 
   .lastfm .highlight {
