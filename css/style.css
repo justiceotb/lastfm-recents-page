@@ -165,11 +165,9 @@ h1 {
 * Custom Styles for Last.FM Recent Tracks
 */
 .container {
-  /* max-width: 1400px; */
-  min-width: 400px;
-  /* position:fixed; */
+  max-width: 1400px;
+  min-width: 380px;
   top:30px;
-  /* margin: 0 auto; */
   margin-top: 68px;
   margin-bottom: 68px;
   padding: 20px 15px;
@@ -252,14 +250,53 @@ h1 {
 }
 
 @media only screen and (max-device-width: 480px) {
+  body {
+    font-size: 58%;
+  }
+
   .container {
-    padding: 0 2px;
+    padding: 26px 0px;
+  }
+
+  .lastfm {
+    margin-left: 2px;
+    width: 378px;
+    /* padding: 4px; */
+  }
+
+  .lastfm .highlight {
+    height: 105px;
+    left: -3px;
+    position: absolute;
+    top: 35px;
+    width: 133px;
+  }
+
+  .lastfm .cover {
+    float: left;
+    height: 100px;
+    width: 100px;
+  }
+  
+  .lastfm .cover > img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .lastfm .info {
+    margin-top: 0px;
+
+  }
+  
+  .lastfm .song {
+    padding-bottom: 16px;
   }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   .container {
     max-width: 650px;
-    padding: 0;
+    /* padding: 0px; */
   }
+
 }
