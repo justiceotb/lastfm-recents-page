@@ -14,12 +14,14 @@ var Lastfm = {
 		if (typeof process === "undefined" ) {
 			trigger = 'getcurrenttrackshttptrigger';
 		}
-		else if (process == '1') {
-			trigger = 'getprevioustrackshttptrigger';
+		else if (process == '1') {		
+			const urlParams = new URLSearchParams(window.location.search);
+			const start = urlParams.get('start');
+			trigger = 'getprevioustrackshttptrigger&start=' + start;
 		} else {
 			trigger = 'getcurrenttrackshttptrigger';
 		}
-		// this.url = 'https://lastfmretriever.azurewebsites.net/api/getcurrenttrackshttptrigger'
+
 		this.url = base_url + trigger
 		this.template = config.template;
 		this.container = config.container;
