@@ -9,7 +9,18 @@
 
 var Lastfm = {
 	init: function(config) {
-		this.url = 'https://lastfmretriever.azurewebsites.net/api/gettrackshttptrigger'
+		var base_url = 'https://lastfmretriever.azurewebsites.net/api/'
+		var process = document.getElementById("app_js").getAttribute("data-process");
+		if (typeof process === "undefined" ) {
+			trigger = 'getcurrenttrackshttptrigger';
+		}
+		else if (process == '1') {
+			trigger = 'getprevioustrackshttptrigger';
+		} else {
+			trigger = 'getcurrenttrackshttptrigger';
+		}
+		// this.url = 'https://lastfmretriever.azurewebsites.net/api/getcurrenttrackshttptrigger'
+		this.url = base_url + trigger
 		this.template = config.template;
 		this.container = config.container;
 		this.fetch();
