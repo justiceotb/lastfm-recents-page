@@ -2,9 +2,11 @@
 * @file style.css
 * @author Craig Beaton
 * @copyright (c) 2024, Craig Beaton
-* @version 1.0.0
+* @version 1.0.1
 * @License Licensed under the MIT License.
 */
+
+/* @import "compass/css3"; */
 
 /**
 * @section Reset styles
@@ -12,7 +14,7 @@
 */
 html {
   overflow-y: scroll;
-  min-height: 100;
+  min-height: 100%;
 }
 
 body,
@@ -75,7 +77,6 @@ footer,
 header,
 hgroup,
 menu,
-nav,
 section {
   display: block;
 }
@@ -84,6 +85,131 @@ body {
   background: #ededed url(../img/noise.png) repeat;
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
+}
+
+/* Nav menu */
+ .nav{
+  position: fixed;
+  display: block;
+  /* background-color: rgb(204, 91, 68); */
+  overflow: hidden;
+  top: 2px; 
+  left: 2px;
+  /* box-shadow: 2px 2px 8px #777;*/
+  border-radius: 30px;
+  /* max-height: 0%;  */
+  
+  /* z-index: 7; */
+}
+.menu {
+  margin-top: 70px;
+  max-height: 0%;
+  transition: max-height .2s ease-out;
+  display: none;
+}
+.menu li{ 
+  list-style: none;
+  padding-left: 70px;
+} 
+ .menu a{
+  display: block;
+  color: rgb(231, 229, 215);
+  font-size: 175%;
+  padding: 10px;
+} 
+ .menu a:hover{
+  background-color: rgb(50, 50, 50);
+} 
+
+/* Menu Icon */
+.hamb{
+  cursor: pointer;
+  float: left;
+  padding: 32px 20px;
+  text-decoration: none;
+  display: float;
+  background-color: rgb(204, 91, 68);
+  color: white;
+  box-shadow: 2px 2px 8px #777;
+  border-radius: 300px;
+  /* z-index: 10; */
+}/* Style label tag */
+
+.hamb-line {
+  background: rgb(231, 229, 215);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+  background: rgb(231, 229, 215);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+.hamb-line::before{
+  top: 5px;
+}
+.hamb-line::after{
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+  max-height: 100%;
+  /* height: auto; */
+  /* height: auto; */
+}
+.side-menu:checked ~ ul {
+  width: 100%;
+  display: block;
+  list-style: none;
+  margin: 0;
+  /* padding: 25px 25px; */
+  background-color: rgb(204, 91, 68);
+  box-shadow: 2px 2px 8px #777;
+  border-radius: 8px 3px 3px 3px;
+}
+.side-menu:checked ~ li {
+  text-decoration: none;
+  display: block;
+  font-size: 200%;
+  padding: 10px 10px 10px 10px;
+  color: white;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top:0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .nav{
+      width: 99%;
+      max-height: none;
+  } 
+  .menu a:hover{
+      background-color: transparent;
+      color: rgb(50, 50, 50);
+  }
 }
 
 .header {
@@ -96,7 +222,7 @@ body {
   margin-bottom: 20px;
   padding: 2px;
   height: 70px;
-  z-index: 9;
+  z-index: 5;
 }
 
 .footer {
