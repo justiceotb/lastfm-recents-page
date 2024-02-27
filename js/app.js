@@ -17,7 +17,7 @@ var Lastfm = {
 		else if (process == '1') {		
 			const urlParams = new URLSearchParams(window.location.search);
 			const start = urlParams.get('start');
-			trigger = 'getprevioustrackshttptrigger&start=' + start;
+			trigger = 'getprevioustrackshttptrigger?start=' + start;
 		} else {
 			trigger = 'getcurrenttrackshttptrigger';
 		}
