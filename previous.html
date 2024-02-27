@@ -22,6 +22,7 @@
   <body>
     <div class="header">
       <h1 id="main-heading">VINYL SHARE PLAYLIST</h1>
+      <h2 id="sub-heading"></h2>
 
         <!-- Menu -->
         <nav class="nav">
@@ -99,7 +100,8 @@
       var parsedtime = new Date(Number(timestamp));
       var month = months[parsedtime.getMonth()];
       var year = parsedtime.getFullYear();
-      document.getElementById('main-heading').innerHTML = "VINYL SHARE PLAYLIST " + month + " " + year;
+      // document.getElementById('main-heading').innerHTML = "VINYL SHARE PLAYLIST " + month + " " + year;
+      document.getElementById('sub-heading').innerHTML = month + " " + year;
     </script>
   </body>
 </html>

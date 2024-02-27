@@ -280,6 +280,13 @@ h1 {
   margin: 16px 0 16px;
   text-align: center;
 }
+h2 {
+  color: rgb(231, 229, 215);
+  font-family: "BenchNine", sans-serif;
+  font-size: 200%;
+  margin: -26px 0;
+  text-align: center;
+}
 
 .loading {
   display: block;
