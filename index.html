@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Hopsters Vinyl Share Playlists" />
+    <meta property="og:description" content="What is playing (or has been played) at the monthly music sharing event" />
+    <meta property="og:image" content="img/fb.pdf" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vinyl Share Playlist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +22,31 @@
   <body>
     <div class="header">
       <h1>VINYL SHARE PLAYLIST</h1>
+
+      <!-- Menu -->
+      <nav class="nav">
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+        <ul class="menu">
+          <!-- <li><a href="index.html">Current Playlist</a></li> -->
+          <li><a href="previous.html?start=1707015600000">Feburary 2024 Playlist</a></li>
+          <!-- <li><a href="previous.html?start=1709391600000">March 2024 Playlist</a></li>
+          <li><a href="previous.html?start=1712415600000">April 2024 Playlist</a></li>
+          <li><a href="previous.html?start=1714838400000">May 2024 Playlist</a></li>
+          <li><a href="previous.html?start=1717257600000">June 2024 Playlist</a></li>
+          <li><a href="previous.html?start=1720281600000">July 2024 Playlist</a></li>
+          <li><a href="previous.html?start=1722700800000">August 2024 Playlist</a></li>
+          <li><a href="previous.html?start=1725120000000">September 2024 Playlist</a></li>
+          <li><a href="previous.html?start=1728144000000">October 2024 Playlist</a></li>
+          <li><a href="previous.html?start=1730559600000">November 2024 Playlist</a></li>
+          <li><a href="previous.html?start=1732978800000">December 2024 Playlist</a></li> -->
+        </ul>
+    </nav>
     </div>
+
+
 
     <div class="container cf">
       <img
@@ -61,12 +88,10 @@
       {{/each}}
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>
-      window.jQuery ||
-        document.write('<script src="js/thirdparty/jquery.min.js"><\/script>');
-    </script>
+    <script>window.jQuery || document.write('<script src="js/thirdparty/jquery.min.js"><\/script>');</script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
-    <script src="js/app.js"></script>
+    <script id="app_js" data-process="0" src="js/app.js"></script>
     <script>setTimeout(function(){ window.location.reload(); }, 300000);</script>
+    <!-- <script>$('.float-nav').click(function() { $('.main-nav, .menu-btn').toggleClass('active'); });</script> -->
   </body>
 </html>
