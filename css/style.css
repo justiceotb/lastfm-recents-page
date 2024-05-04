@@ -200,6 +200,12 @@ body {
   top:0;
 }
 
+.header img {
+  position: fixed;
+  right: 2px;
+  top: 7px;
+}
+
 /* Responsiveness */
 @media (max-width: 768px) {
   .nav{
@@ -209,6 +215,13 @@ body {
   .menu a:hover{
       background-color: transparent;
       color: rgb(50, 50, 50);
+  }
+
+  .header img {
+    position: fixed;
+    top: 22px;  
+    height: 28px;
+    width: 75px;
   }
 }
 

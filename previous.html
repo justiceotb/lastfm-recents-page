@@ -24,7 +24,8 @@
     <div class="header">
       <h1 id="main-heading">VINYL SHARE PLAYLIST</h1>
       <h2 id="sub-heading"></h2>
-
+      <a id="spotify-button-link" href="#" target="_blank"><img id="spotify-button-img" src="img/spotify-button.png" alt="Play on Spotify"></a> 
+      
         <!-- Menu -->
         <nav class="nav">
           <!-- Hamburger icon -->
@@ -33,11 +34,11 @@
   
           <ul class="menu">
             <li><a href="current.html">Playing now</a></li>
-            <li><a href="previous.html?start=1707015600000">Feburary 2024 Playlist</a></li>
-            <li><a href="previous.html?start=1709434800000">March 2024 Playlist</a></li>
-            <li><a href="previous.html?start=1712458800000">April 2024 Playlist</a></li>
-            <!-- <li><a href="previous.html?start=1714878000000">May 2024 Playlist</a></li>
-            <li><a href="previous.html?start=1717297200000">June 2024 Playlist</a></li>
+            <li><a href="previous.html?start=1707015600000&spotify=3QQp6LdPWrXZFwN8XGks3P?si=1ff8323f33c842f0">Feburary 2024 Playlist</a></li>
+            <li><a href="previous.html?start=1709434800000&spotify=1ii9yDZCWZkHHA2C2iHZsQ?si=0914361ac8444475">March 2024 Playlist</a></li>
+            <li><a href="previous.html?start=1712458800000&spotify=3ETjFxHqIDFj0JWrCIJpML?si=6ef9c319be4d4ba9">April 2024 Playlist</a></li>
+            <li><a href="previous.html?start=1714878000000">May 2024 Playlist</a></li>
+            <!-- <li><a href="previous.html?start=1717297200000">June 2024 Playlist</a></li>
             <li><a href="previous.html?start=1720321200000">July 2024 Playlist</a></li>
             <li><a href="previous.html?start=1722740400000">August 2024 Playlist</a></li>
             <li><a href="previous.html?start=1725159600000">September 2024 Playlist</a></li>
@@ -101,8 +102,14 @@
       var parsedtime = new Date(Number(timestamp));
       var month = months[parsedtime.getMonth()];
       var year = parsedtime.getFullYear();
-      // document.getElementById('main-heading').innerHTML = "VINYL SHARE PLAYLIST " + month + " " + year;
       document.getElementById('sub-heading').innerHTML = month + " " + year;
+
+      var playlist = params.get('spotify');
+      if (playlist == null) {
+        document.getElementById('spotify-button-img').src = "img/spotify-button-coming-soon.png"
+      } else {
+        document.getElementById('spotify-button-link').href = "https://open.spotify.com/playlist/" + playlist;
+      }
     </script>
   </body>
 </html>
