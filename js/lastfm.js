@@ -10,7 +10,7 @@
 var Lastfm = {
 	init: function(config) {
 		var base_url = 'https://lastfmretriever.azurewebsites.net/api/'
-		var process = document.getElementById("app_js").getAttribute("data-process");
+		var process = document.getElementById("lastfm_js").getAttribute("data-process");
 		if (typeof process === "undefined" ) {
 			trigger = 'getcurrenttrackshttptrigger';
 		}
