@@ -204,10 +204,16 @@ body {
   position: fixed;
   display: block;
   /* float: right; */
-  right: 0px;
   padding: 2px;
   top: 5px;
   z-index: 10;
+}
+
+#spotify-button-img {
+  right: 0px;
+}
+#youtube-button-img {
+  right: 150px;
 }
 
 /* Responsiveness */
@@ -227,6 +233,15 @@ body {
     height: 28px;
     width: 75px;
     padding: 4px;
+  }
+
+  #spotify-button-img {
+    right: 0px;
+    top: 0px;
+  }
+  #youtube-button-img {
+    right: 0px;
+    top: 38px;
   }
 }
 

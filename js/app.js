@@ -1,65 +1,51 @@
 /*---------------
- * jQuery Last.FM Plugin by Craig Beaton
- * Forked from Lastfm Recent Tracks by Pinceladas da Web https://github.com/pinceladasdaweb/Lastfm-Recent-Tracks
+ * Page loading script by Craig Beaton
  * Copyright (c) 2024
- * Version: 1.0.0 (30-01-2024)
+ * Version: 1.0.0 (06-05-2024)
  * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
- * Requires: jQuery v1.9 or later and Handlebars 1.0 or later
 ---------------*/
 
-var Lastfm = {
-	init: function(config) {
-		var base_url = 'https://lastfmretriever.azurewebsites.net/api/'
-		var process = document.getElementById("app_js").getAttribute("data-process");
-		if (typeof process === "undefined" ) {
-			trigger = 'getcurrenttrackshttptrigger';
-		}
-		else if (process == '1') {		
-			const urlParams = new URLSearchParams(window.location.search);
-			const start = urlParams.get('start');
-			trigger = 'getprevioustrackshttptrigger?start=' + start;
-		} else {
-			trigger = 'getcurrenttrackshttptrigger';
-		}
+var menu_options = "";
+$.getJSON(
+    "json/menu.json", 
+    function(result) {
+        var ul = document.getElementById("menu-list");
+        $.each(result.menu, function(file) {
+        var li = document.createElement("li");
+        var a = document.createElement('a'); 
+        var link = document.createTextNode(this.title);  
+        a.appendChild(link); 
+        a.title = this.title; 
+        a.href = 'previous.html?start=' + this.start + '&spotify=' + this.spotify + '&youtube=' + this.youtube; 
+        document.body.appendChild(a); 
+        li.appendChild(a);
+        ul.appendChild(li);
+        }
+    );
+    }
+);
 
-		this.url = base_url + trigger
-		this.template = config.template;
-		this.container = config.container;
-		this.fetch();
-	},
-	attachTemplate: function() {
-		var template = Handlebars.compile(this.template);
+var url = window.location.pathname;
+var filename = url.substring(url.lastIndexOf('/')+1);
+if (filename == 'previous.html') {
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    const params = new URLSearchParams(window.location.search);
+    const timestamp = params.get('start');
+    var parsedtime = new Date(Number(timestamp));
+    var month = months[parsedtime.getMonth()];
+    var year = parsedtime.getFullYear();
+    document.getElementById('sub-heading').innerHTML = month + " " + year;
 
-		this.container.empty().append(template(this.tracks));
-	},
-	fetch: function() {
-		var self = this;
-
-		$.getJSON(this.url, function(data) {
-			var feed = data.recenttracks.track;
-
-			self.tracks = $.map(feed, function(track) {
-				var d = new Date(track.date['uts'] * 1000)
-				const shortTime = new Intl.DateTimeFormat("en", {
-					timeStyle: "short",
-				  });
-				var thetime = shortTime.format(d); 
-
-				return {
-					image: track.image[2]['#text'],
-					song: track.name,
-					artist: track.artist['#text'],
-					album: track.album['#text'],
-					link: track.url,
-					time: thetime
-				}
-			});
-			self.attachTemplate();
-		});
-	}
+    var spotify = params.get('spotify');
+    if (spotify == '') {
+        document.getElementById('spotify-button-img').src = "img/spotify-button-coming-soon.png"
+    } else {
+        document.getElementById('spotify-button-link').href = "https://open.spotify.com/playlist/" + spotify;
+    }
+    var youtube = params.get('youtube');
+    if (youtube == '') {
+        document.getElementById('youtube-button-img').src = "img/youtube-button-coming-soon.png"
+    } else {
+        document.getElementById('youtube-button-link').href = "https://www.youtube.com/playlist?list=" + youtube;
+    }
 }
-
-Lastfm.init({
-	template: $('#tracks-template').html(),
-	container: $('.container'),
-})
