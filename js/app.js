@@ -28,13 +28,18 @@ $.getJSON(
 var url = window.location.pathname;
 var filename = url.substring(url.lastIndexOf('/')+1);
 if (filename == 'previous.html') {
-    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-    const params = new URLSearchParams(window.location.search);
-    const timestamp = params.get('start');
-    var parsedtime = new Date(Number(timestamp));
-    var month = months[parsedtime.getMonth()];
-    var year = parsedtime.getFullYear();
-    document.getElementById('sub-heading').innerHTML = month + " " + year;
+    var description = params.get('desc');
+    if (description == '') {
+        const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        const params = new URLSearchParams(window.location.search);
+        const timestamp = params.get('start');
+        var parsedtime = new Date(Number(timestamp));
+        var month = months[parsedtime.getMonth()];
+        var year = parsedtime.getFullYear();
+        document.getElementById('sub-heading').innerHTML = month + " " + year;
+    } else {
+        document.getElementById('sub-heading').innerHTML = description;
+    }
 
     var spotify = params.get('spotify');
     if (spotify == '') {
