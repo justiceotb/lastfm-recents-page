@@ -16,7 +16,7 @@ $.getJSON(
         var link = document.createTextNode(this.title);  
         a.appendChild(link); 
         a.title = this.title; 
-        a.href = 'previous.html?start=' + this.start + '&spotify=' + this.spotify + '&youtube=' + this.youtube; 
+        a.href = 'previous.html?start=' + this.start + '&spotify=' + this.spotify + '&youtube=' + this.youtube + '&desc=' + this.desc; 
         document.body.appendChild(a); 
         li.appendChild(a);
         ul.appendChild(li);
