@@ -63,3 +63,7 @@ Lastfm.init({
 	template: $('#tracks-template').html(),
 	container: $('.container'),
 })
+
+setInterval(function() {
+    Lastfm.fetch();
+}, 180000); // 180,000 ms = 3 minutes
