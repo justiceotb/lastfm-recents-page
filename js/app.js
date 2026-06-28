@@ -62,7 +62,7 @@ function buildHistoryPage() {
 
     // Build session history list
     $.getJSON('json/menu.json', function(result) {
-        var items = result.menu.slice().reverse(); // newest first
+        var items = result.menu.filter(function(i) { return !i.hidden; }).slice().reverse(); // newest first
         var historyEl = document.getElementById('history-list');
         var currentYear = null;
 
