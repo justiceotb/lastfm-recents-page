@@ -26,6 +26,9 @@ if (filename === 'previous.html') {
         document.getElementById('sub-heading').innerHTML = description;
     }
 
+    var eventType = params.get('eventType') || 'BYO Vinyl';
+    document.getElementById('event-type').textContent = eventType;
+
     var spotify = params.get('spotify');
     if (spotify === '') {
         document.getElementById('spotify-button-img').src = "img/spotify-button-coming-soon.png";
@@ -79,10 +82,12 @@ function buildHistoryPage() {
             }
 
             var label = item.desc !== '' ? item.desc : item.title;
+            var eventType = item.eventType || 'BYO Vinyl';
             var href = 'previous.html?start=' + item.start +
                        '&spotify=' + item.spotify +
                        '&youtube=' + item.youtube +
-                       '&desc=' + encodeURIComponent(item.desc);
+                       '&desc=' + encodeURIComponent(item.desc) +
+                       '&eventType=' + encodeURIComponent(eventType);
 
             var spotifyHref = item.spotify !== ''
                 ? 'https://open.spotify.com/playlist/' + item.spotify : '';
@@ -92,7 +97,10 @@ function buildHistoryPage() {
             var card = document.createElement('div');
             card.className = 'history-item';
             card.innerHTML =
+                '<div class="history-title-group">' +
+                '<span class="event-type-badge">' + eventType + '</span>' +
                 '<a class="history-title" href="' + href + '">' + label + '</a>' +
+                '</div>' +
                 '<div class="history-links">' +
                 (spotifyHref ? '<a href="' + spotifyHref + '" target="_blank"><img src="img/spotify-button.png" alt="Spotify" class="history-btn-img" /></a>' : '') +
                 (youtubeHref ? '<a href="' + youtubeHref + '" target="_blank"><img src="img/youtube-button.png" alt="YouTube" class="history-btn-img" /></a>' : '') +
