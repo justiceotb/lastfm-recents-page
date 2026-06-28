@@ -3,3 +3,7 @@
 test.html
 init.js
 /no_upload
+client_secret.json
+scripts/
+.venv/
+CLAUDE.md

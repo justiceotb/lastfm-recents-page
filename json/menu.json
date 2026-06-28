@@ -1,90 +1,102 @@
 {
-    "menu": [{
+    "menu": [
+        {
             "title": "February 2024 Playlist",
             "start": "1707015600000",
             "spotify": "3QQp6LdPWrXZFwN8XGks3P?si=1ff8323f33c842f0",
             "youtube": "PLULwRaDnJRQltuNdj9MffM0Z22MO82Vvj",
             "desc": "",
             "eventType": "BYO Vinyl"
-        }, {
+        },
+        {
             "title": "March 2024 Playlist",
             "start": "1709434800000",
             "spotify": "1ii9yDZCWZkHHA2C2iHZsQ?si=0914361ac8444475",
             "youtube": "PLULwRaDnJRQmu-iPJupa1gsaKqlVVa8VN",
             "desc": "",
             "eventType": "BYO Vinyl"
-        }, {
+        },
+        {
             "title": "April 2024 Playlist",
             "start": "1712458800000",
             "spotify": "3ETjFxHqIDFj0JWrCIJpML?si=6ef9c319be4d4ba9",
             "youtube": "PLULwRaDnJRQnXI7gtbcrDZCb6R5rOyfy6",
             "desc": "",
             "eventType": "BYO Vinyl"
-        }, {
+        },
+        {
             "title": "May 2024 Playlist",
             "start": "1714878000000",
             "spotify": "2NZxeqSNzP8cHpp8ygOVlj?si=c3d3d0433cf344a5",
             "youtube": "PLULwRaDnJRQndp9xSusW4QhjeDOn5Hx88",
             "desc": "",
             "eventType": "BYO Vinyl"
-        }, {
+        },
+        {
             "title": "June 2024 Playlist",
             "start": "1717297200000",
             "spotify": "5PbEGa301tSQrmQrfO18Pu?si=cfc02d5651b84f6a",
             "youtube": "PLULwRaDnJRQmuy8YaiCc68UnT7k_GVwUv",
             "desc": "",
             "eventType": "BYO Vinyl"
-        }, {
+        },
+        {
             "title": "July 2024 Playlist",
             "start": "1720325300000",
             "spotify": "6A7NIsOPwn4WlrxVHcwo7o?si=5b175f767aaf4823",
             "youtube": "PLULwRaDnJRQkQwHcV31krPeGiyEvDVvCJ",
             "desc": "",
             "eventType": "BYO Vinyl"
-        }, {
+        },
+        {
             "title": "August 2024 Playlist",
             "start": "1722740400000",
             "spotify": "4COd5jNqeXOAUAfqNsKj3S?si=3cff25934d47470a",
             "youtube": "PLULwRaDnJRQkez3ZgWLQpe1Aux4C9cJBo",
             "desc": "",
             "eventType": "BYO Vinyl"
-        }, {
+        },
+        {
             "title": "September 2024 Playlist",
             "start": "1725159600000",
             "spotify": "0LKbJNnwl271i4FuuLzQaI?si=9303a7ee76e447d9",
             "youtube": "PLULwRaDnJRQm4j3XOM5opxZSGcCFEzVnd",
             "desc": "",
             "eventType": "BYO Vinyl"
-        }, {
+        },
+        {
             "title": "November 2024 Playlist",
             "start": "1730602800000",
             "spotify": "6XbSv4T6BWTOOEADWankW3?si=70102cbf3f894c0e",
             "youtube": "PLULwRaDnJRQnz0zq1bFR-vRfORhhPdtRX",
             "desc": "",
             "eventType": "BYO Vinyl"
-        }, {
+        },
+        {
             "title": "December 2024 Playlist",
             "start": "1733022000000",
             "spotify": "5RwvxUcK7PZAmH5l95JaNS?si=318d71adfc384aa7",
             "youtube": "PLULwRaDnJRQkxYM0Ddk0Fg6W6KlQzSY9b",
             "desc": "",
             "eventType": "BYO Vinyl"
-        }, {
+        },
+        {
             "title": "Xmas Special 2024 Playlist",
             "start": "1734145200000",
             "spotify": "3Ra9JeX2qgjlKpqTfq0Gwp?si=cc152b05de444f04",
             "youtube": "PLULwRaDnJRQlcmHRPIXlbVxN4qppM2tvg",
             "desc": "Xmas Special Event 2024",
             "eventType": "BYO Vinyl"
-        }, {
+        },
+        {
             "title": "January 2025 Playlist",
             "start": "1736046000000",
-            "spotify": "",
-            "youtube": "",
+            "spotify": "6rPp5o1rT6i0ql0oKs7cOI",
+            "youtube": "PLfhx1t8zO650",
             "desc": "",
-            "eventType": "BYO Vinyl",
-            "hidden": true
-        }, {
+            "eventType": "BYO Vinyl"
+        },
+        {
             "title": "February 2025 Playlist",
             "start": "1738465200000",
             "spotify": "",
@@ -92,7 +104,8 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "March 2025 Playlist",
             "start": "1740884400000",
             "spotify": "",
@@ -100,7 +113,8 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "April 2025 Playlist",
             "start": "1743908400000",
             "spotify": "",
@@ -108,7 +122,8 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "May 2025 Playlist",
             "start": "1746327600000",
             "spotify": "",
@@ -116,7 +131,8 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "June 2025 Playlist",
             "start": "1748746800000",
             "spotify": "",
@@ -124,7 +140,8 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "July 2025 Playlist",
             "start": "1751770800000",
             "spotify": "",
@@ -132,7 +149,8 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "August 2025 Playlist",
             "start": "1754190000000",
             "spotify": "",
@@ -140,7 +158,8 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "September 2025 Playlist",
             "start": "1757214000000",
             "spotify": "",
@@ -148,7 +167,8 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "October 2025 Playlist",
             "start": "1759633200000",
             "spotify": "",
@@ -156,7 +176,8 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "November 2025 Playlist",
             "start": "1762052400000",
             "spotify": "",
@@ -164,7 +185,8 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "December 2025 Playlist",
             "start": "1765076400000",
             "spotify": "",
@@ -172,7 +194,8 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "January 2026 Playlist",
             "start": "1767495600000",
             "spotify": "",
@@ -180,7 +203,8 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "February 2026 Playlist",
             "start": "1769914800000",
             "spotify": "",
@@ -188,7 +212,8 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "March 2026 Playlist",
             "start": "1772334000000",
             "spotify": "",
@@ -196,7 +221,8 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "April 2026 Playlist",
             "start": "1775358000000",
             "spotify": "",
@@ -204,7 +230,8 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "May 2026 Playlist",
             "start": "1777777200000",
             "spotify": "",
@@ -212,10 +239,11 @@
             "desc": "",
             "eventType": "BYO Vinyl",
             "hidden": true
-        }, {
+        },
+        {
             "title": "June 2026 Playlist",
             "start": "1780801200000",
-            "spotify": "",
+            "spotify": "7rFl18h3NOJnovy0RbfzRB",
             "youtube": "",
             "desc": "",
             "eventType": "BYO Vinyl",
