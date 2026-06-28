@@ -28,6 +28,7 @@ if (filename === 'previous.html') {
 
     var eventType = params.get('eventType') || 'BYO Vinyl';
     document.getElementById('event-type').textContent = eventType;
+    document.getElementById('main-heading').textContent = eventType.toUpperCase() + ' PLAYLIST';
 
     var spotify = params.get('spotify');
     if (spotify === '') {
