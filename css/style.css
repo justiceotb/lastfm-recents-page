@@ -258,6 +258,15 @@ body {
   z-index: 5;
 }
 
+.tall-header {
+  height: auto;
+  padding-bottom: 8px;
+}
+
+.page-previous .container {
+  margin-top: 140px;
+}
+
 .footer {
   position: fixed;
   left: 0;
